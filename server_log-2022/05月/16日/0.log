@@ -1,0 +1,103 @@
+2022-05-16 12:42:31.196  INFO 928 --- [restartedMain] unctionOfOnePersonAndOneOrderApplication : Starting SpringBootRedisHmdpCouponSeckillToPlaceAnOrderRealizeTheFunctionOfOnePersonAndOneOrderApplication using Java 16.0.2 on mao with PID 928 (H:\程序\大三下期\spring_boot_redis_hmdp优惠券秒杀下单实现一人一单功能\target\classes started by mao in H:\程序\大三下期\spring_boot_redis_hmdp优惠券秒杀下单实现一人一单功能)
+2022-05-16 12:42:31.197 DEBUG 928 --- [restartedMain] unctionOfOnePersonAndOneOrderApplication : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-16 12:42:31.197  INFO 928 --- [restartedMain] unctionOfOnePersonAndOneOrderApplication : The following 1 profile is active: "dev"
+2022-05-16 12:42:31.243  INFO 928 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-16 12:42:31.243  INFO 928 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-16 12:42:31.866  INFO 928 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-16 12:42:31.868  INFO 928 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-05-16 12:42:31.895  INFO 928 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2022-05-16 12:42:32.430  INFO 928 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-05-16 12:42:32.439  INFO 928 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-16 12:42:32.439  INFO 928 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-05-16 12:42:32.519  INFO 928 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-16 12:42:32.519  INFO 928 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1275 ms
+2022-05-16 12:42:32.802  INFO 928 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-05-16 12:42:32.968  INFO 928 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-16 12:42:34.041  INFO 928 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-16 12:42:34.089  INFO 928 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-05-16 12:42:34.100  INFO 928 --- [restartedMain] unctionOfOnePersonAndOneOrderApplication : Started SpringBootRedisHmdpCouponSeckillToPlaceAnOrderRealizeTheFunctionOfOnePersonAndOneOrderApplication in 3.418 seconds (JVM running for 4.336)
+2022-05-16 12:42:38.536  INFO 928 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-16 12:42:38.536  INFO 928 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-16 12:42:38.538  INFO 928 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-05-16 12:42:38.869 DEBUG 928 --- [http-nio-8081-exec-2] m.s.m.SeckillVoucherMapper.selectById    : ==>  Preparing: SELECT voucher_id,stock,create_time,begin_time,end_time,update_time FROM tb_seckill_voucher WHERE voucher_id=?
+2022-05-16 12:42:38.890 DEBUG 928 --- [http-nio-8081-exec-2] m.s.m.SeckillVoucherMapper.selectById    : ==> Parameters: 2(Long)
+2022-05-16 12:42:38.911 DEBUG 928 --- [http-nio-8081-exec-2] m.s.m.SeckillVoucherMapper.selectById    : <==      Total: 1
+2022-05-16 12:42:38.961 DEBUG 928 --- [http-nio-8081-exec-2] m.s.m.VoucherOrderMapper.selectCount     : ==>  Preparing: SELECT COUNT( * ) FROM tb_voucher_order WHERE (user_id = ? AND voucher_id = ?)
+2022-05-16 12:42:38.962 DEBUG 928 --- [http-nio-8081-exec-2] m.s.m.VoucherOrderMapper.selectCount     : ==> Parameters: 5(Long), 2(Long)
+2022-05-16 12:42:38.965 DEBUG 928 --- [http-nio-8081-exec-2] m.s.m.VoucherOrderMapper.selectCount     : <==      Total: 1
+2022-05-16 12:42:38.970 DEBUG 928 --- [http-nio-8081-exec-2] m.s.mapper.SeckillVoucherMapper.update   : ==>  Preparing: UPDATE tb_seckill_voucher SET stock = stock - 1 WHERE (voucher_id = ? AND stock > ?)
+2022-05-16 12:42:38.972 DEBUG 928 --- [http-nio-8081-exec-2] m.s.mapper.SeckillVoucherMapper.update   : ==> Parameters: 2(Long), 0(Integer)
+2022-05-16 12:42:38.979 DEBUG 928 --- [http-nio-8081-exec-2] m.s.mapper.SeckillVoucherMapper.update   : <==    Updates: 1
+2022-05-16 12:42:39.344 DEBUG 928 --- [http-nio-8081-exec-2] m.s.mapper.VoucherOrderMapper.insert     : ==>  Preparing: INSERT INTO tb_voucher_order ( id, user_id, voucher_id ) VALUES ( ?, ?, ? )
+2022-05-16 12:42:39.345 DEBUG 928 --- [http-nio-8081-exec-2] m.s.mapper.VoucherOrderMapper.insert     : ==> Parameters: 50293027654074369(Long), 5(Long), 2(Long)
+2022-05-16 12:42:39.349 DEBUG 928 --- [http-nio-8081-exec-2] m.s.mapper.VoucherOrderMapper.insert     : <==    Updates: 1
+2022-05-16 12:42:44.156 DEBUG 928 --- [http-nio-8081-exec-3] m.s.m.SeckillVoucherMapper.selectById    : ==>  Preparing: SELECT voucher_id,stock,create_time,begin_time,end_time,update_time FROM tb_seckill_voucher WHERE voucher_id=?
+2022-05-16 12:42:44.157 DEBUG 928 --- [http-nio-8081-exec-3] m.s.m.SeckillVoucherMapper.selectById    : ==> Parameters: 2(Long)
+2022-05-16 12:42:44.159 DEBUG 928 --- [http-nio-8081-exec-3] m.s.m.SeckillVoucherMapper.selectById    : <==      Total: 1
+2022-05-16 12:42:44.160 DEBUG 928 --- [http-nio-8081-exec-3] m.s.m.VoucherOrderMapper.selectCount     : ==>  Preparing: SELECT COUNT( * ) FROM tb_voucher_order WHERE (user_id = ? AND voucher_id = ?)
+2022-05-16 12:42:44.161 DEBUG 928 --- [http-nio-8081-exec-3] m.s.m.VoucherOrderMapper.selectCount     : ==> Parameters: 5(Long), 2(Long)
+2022-05-16 12:42:44.162 DEBUG 928 --- [http-nio-8081-exec-3] m.s.m.VoucherOrderMapper.selectCount     : <==      Total: 1
+2022-05-16 12:42:45.368 DEBUG 928 --- [http-nio-8081-exec-4] m.s.m.SeckillVoucherMapper.selectById    : ==>  Preparing: SELECT voucher_id,stock,create_time,begin_time,end_time,update_time FROM tb_seckill_voucher WHERE voucher_id=?
+2022-05-16 12:42:45.368 DEBUG 928 --- [http-nio-8081-exec-4] m.s.m.SeckillVoucherMapper.selectById    : ==> Parameters: 2(Long)
+2022-05-16 12:42:45.370 DEBUG 928 --- [http-nio-8081-exec-4] m.s.m.SeckillVoucherMapper.selectById    : <==      Total: 1
+2022-05-16 12:42:45.371 DEBUG 928 --- [http-nio-8081-exec-4] m.s.m.VoucherOrderMapper.selectCount     : ==>  Preparing: SELECT COUNT( * ) FROM tb_voucher_order WHERE (user_id = ? AND voucher_id = ?)
+2022-05-16 12:42:45.372 DEBUG 928 --- [http-nio-8081-exec-4] m.s.m.VoucherOrderMapper.selectCount     : ==> Parameters: 5(Long), 2(Long)
+2022-05-16 12:42:45.373 DEBUG 928 --- [http-nio-8081-exec-4] m.s.m.VoucherOrderMapper.selectCount     : <==      Total: 1
+2022-05-16 12:42:45.941 DEBUG 928 --- [http-nio-8081-exec-5] m.s.m.SeckillVoucherMapper.selectById    : ==>  Preparing: SELECT voucher_id,stock,create_time,begin_time,end_time,update_time FROM tb_seckill_voucher WHERE voucher_id=?
+2022-05-16 12:42:45.941 DEBUG 928 --- [http-nio-8081-exec-5] m.s.m.SeckillVoucherMapper.selectById    : ==> Parameters: 2(Long)
+2022-05-16 12:42:45.943 DEBUG 928 --- [http-nio-8081-exec-5] m.s.m.SeckillVoucherMapper.selectById    : <==      Total: 1
+2022-05-16 12:42:45.946 DEBUG 928 --- [http-nio-8081-exec-5] m.s.m.VoucherOrderMapper.selectCount     : ==>  Preparing: SELECT COUNT( * ) FROM tb_voucher_order WHERE (user_id = ? AND voucher_id = ?)
+2022-05-16 12:42:45.946 DEBUG 928 --- [http-nio-8081-exec-5] m.s.m.VoucherOrderMapper.selectCount     : ==> Parameters: 5(Long), 2(Long)
+2022-05-16 12:42:45.948 DEBUG 928 --- [http-nio-8081-exec-5] m.s.m.VoucherOrderMapper.selectCount     : <==      Total: 1
+2022-05-16 12:42:46.503 DEBUG 928 --- [http-nio-8081-exec-6] m.s.m.SeckillVoucherMapper.selectById    : ==>  Preparing: SELECT voucher_id,stock,create_time,begin_time,end_time,update_time FROM tb_seckill_voucher WHERE voucher_id=?
+2022-05-16 12:42:46.504 DEBUG 928 --- [http-nio-8081-exec-6] m.s.m.SeckillVoucherMapper.selectById    : ==> Parameters: 2(Long)
+2022-05-16 12:42:46.505 DEBUG 928 --- [http-nio-8081-exec-6] m.s.m.SeckillVoucherMapper.selectById    : <==      Total: 1
+2022-05-16 12:42:46.506 DEBUG 928 --- [http-nio-8081-exec-6] m.s.m.VoucherOrderMapper.selectCount     : ==>  Preparing: SELECT COUNT( * ) FROM tb_voucher_order WHERE (user_id = ? AND voucher_id = ?)
+2022-05-16 12:42:46.507 DEBUG 928 --- [http-nio-8081-exec-6] m.s.m.VoucherOrderMapper.selectCount     : ==> Parameters: 5(Long), 2(Long)
+2022-05-16 12:42:46.507 DEBUG 928 --- [http-nio-8081-exec-6] m.s.m.VoucherOrderMapper.selectCount     : <==      Total: 1
+2022-05-16 12:42:46.951 DEBUG 928 --- [http-nio-8081-exec-7] m.s.m.SeckillVoucherMapper.selectById    : ==>  Preparing: SELECT voucher_id,stock,create_time,begin_time,end_time,update_time FROM tb_seckill_voucher WHERE voucher_id=?
+2022-05-16 12:42:46.952 DEBUG 928 --- [http-nio-8081-exec-7] m.s.m.SeckillVoucherMapper.selectById    : ==> Parameters: 2(Long)
+2022-05-16 12:42:46.953 DEBUG 928 --- [http-nio-8081-exec-7] m.s.m.SeckillVoucherMapper.selectById    : <==      Total: 1
+2022-05-16 12:42:46.955 DEBUG 928 --- [http-nio-8081-exec-7] m.s.m.VoucherOrderMapper.selectCount     : ==>  Preparing: SELECT COUNT( * ) FROM tb_voucher_order WHERE (user_id = ? AND voucher_id = ?)
+2022-05-16 12:42:46.955 DEBUG 928 --- [http-nio-8081-exec-7] m.s.m.VoucherOrderMapper.selectCount     : ==> Parameters: 5(Long), 2(Long)
+2022-05-16 12:42:46.956 DEBUG 928 --- [http-nio-8081-exec-7] m.s.m.VoucherOrderMapper.selectCount     : <==      Total: 1
+2022-05-16 12:42:47.411 DEBUG 928 --- [http-nio-8081-exec-8] m.s.m.SeckillVoucherMapper.selectById    : ==>  Preparing: SELECT voucher_id,stock,create_time,begin_time,end_time,update_time FROM tb_seckill_voucher WHERE voucher_id=?
+2022-05-16 12:42:47.412 DEBUG 928 --- [http-nio-8081-exec-8] m.s.m.SeckillVoucherMapper.selectById    : ==> Parameters: 2(Long)
+2022-05-16 12:42:47.413 DEBUG 928 --- [http-nio-8081-exec-8] m.s.m.SeckillVoucherMapper.selectById    : <==      Total: 1
+2022-05-16 12:42:47.415 DEBUG 928 --- [http-nio-8081-exec-8] m.s.m.VoucherOrderMapper.selectCount     : ==>  Preparing: SELECT COUNT( * ) FROM tb_voucher_order WHERE (user_id = ? AND voucher_id = ?)
+2022-05-16 12:42:47.416 DEBUG 928 --- [http-nio-8081-exec-8] m.s.m.VoucherOrderMapper.selectCount     : ==> Parameters: 5(Long), 2(Long)
+2022-05-16 12:42:47.417 DEBUG 928 --- [http-nio-8081-exec-8] m.s.m.VoucherOrderMapper.selectCount     : <==      Total: 1
+2022-05-16 12:42:47.796 DEBUG 928 --- [http-nio-8081-exec-9] m.s.m.SeckillVoucherMapper.selectById    : ==>  Preparing: SELECT voucher_id,stock,create_time,begin_time,end_time,update_time FROM tb_seckill_voucher WHERE voucher_id=?
+2022-05-16 12:42:47.796 DEBUG 928 --- [http-nio-8081-exec-9] m.s.m.SeckillVoucherMapper.selectById    : ==> Parameters: 2(Long)
+2022-05-16 12:42:47.798 DEBUG 928 --- [http-nio-8081-exec-9] m.s.m.SeckillVoucherMapper.selectById    : <==      Total: 1
+2022-05-16 12:42:47.803 DEBUG 928 --- [http-nio-8081-exec-9] m.s.m.VoucherOrderMapper.selectCount     : ==>  Preparing: SELECT COUNT( * ) FROM tb_voucher_order WHERE (user_id = ? AND voucher_id = ?)
+2022-05-16 12:42:47.804 DEBUG 928 --- [http-nio-8081-exec-9] m.s.m.VoucherOrderMapper.selectCount     : ==> Parameters: 5(Long), 2(Long)
+2022-05-16 12:42:47.805 DEBUG 928 --- [http-nio-8081-exec-9] m.s.m.VoucherOrderMapper.selectCount     : <==      Total: 1
+2022-05-16 12:42:48.285 DEBUG 928 --- [http-nio-8081-exec-10] m.s.m.SeckillVoucherMapper.selectById    : ==>  Preparing: SELECT voucher_id,stock,create_time,begin_time,end_time,update_time FROM tb_seckill_voucher WHERE voucher_id=?
+2022-05-16 12:42:48.286 DEBUG 928 --- [http-nio-8081-exec-10] m.s.m.SeckillVoucherMapper.selectById    : ==> Parameters: 2(Long)
+2022-05-16 12:42:48.287 DEBUG 928 --- [http-nio-8081-exec-10] m.s.m.SeckillVoucherMapper.selectById    : <==      Total: 1
+2022-05-16 12:42:48.288 DEBUG 928 --- [http-nio-8081-exec-10] m.s.m.VoucherOrderMapper.selectCount     : ==>  Preparing: SELECT COUNT( * ) FROM tb_voucher_order WHERE (user_id = ? AND voucher_id = ?)
+2022-05-16 12:42:48.288 DEBUG 928 --- [http-nio-8081-exec-10] m.s.m.VoucherOrderMapper.selectCount     : ==> Parameters: 5(Long), 2(Long)
+2022-05-16 12:42:48.289 DEBUG 928 --- [http-nio-8081-exec-10] m.s.m.VoucherOrderMapper.selectCount     : <==      Total: 1
+2022-05-16 12:42:48.629 DEBUG 928 --- [http-nio-8081-exec-1] m.s.m.SeckillVoucherMapper.selectById    : ==>  Preparing: SELECT voucher_id,stock,create_time,begin_time,end_time,update_time FROM tb_seckill_voucher WHERE voucher_id=?
+2022-05-16 12:42:48.629 DEBUG 928 --- [http-nio-8081-exec-1] m.s.m.SeckillVoucherMapper.selectById    : ==> Parameters: 2(Long)
+2022-05-16 12:42:48.630 DEBUG 928 --- [http-nio-8081-exec-1] m.s.m.SeckillVoucherMapper.selectById    : <==      Total: 1
+2022-05-16 12:42:48.631 DEBUG 928 --- [http-nio-8081-exec-1] m.s.m.VoucherOrderMapper.selectCount     : ==>  Preparing: SELECT COUNT( * ) FROM tb_voucher_order WHERE (user_id = ? AND voucher_id = ?)
+2022-05-16 12:42:48.632 DEBUG 928 --- [http-nio-8081-exec-1] m.s.m.VoucherOrderMapper.selectCount     : ==> Parameters: 5(Long), 2(Long)
+2022-05-16 12:42:48.633 DEBUG 928 --- [http-nio-8081-exec-1] m.s.m.VoucherOrderMapper.selectCount     : <==      Total: 1
+2022-05-16 12:42:49.051 DEBUG 928 --- [http-nio-8081-exec-2] m.s.m.SeckillVoucherMapper.selectById    : ==>  Preparing: SELECT voucher_id,stock,create_time,begin_time,end_time,update_time FROM tb_seckill_voucher WHERE voucher_id=?
+2022-05-16 12:42:49.052 DEBUG 928 --- [http-nio-8081-exec-2] m.s.m.SeckillVoucherMapper.selectById    : ==> Parameters: 2(Long)
+2022-05-16 12:42:49.053 DEBUG 928 --- [http-nio-8081-exec-2] m.s.m.SeckillVoucherMapper.selectById    : <==      Total: 1
+2022-05-16 12:42:49.054 DEBUG 928 --- [http-nio-8081-exec-2] m.s.m.VoucherOrderMapper.selectCount     : ==>  Preparing: SELECT COUNT( * ) FROM tb_voucher_order WHERE (user_id = ? AND voucher_id = ?)
+2022-05-16 12:42:49.054 DEBUG 928 --- [http-nio-8081-exec-2] m.s.m.VoucherOrderMapper.selectCount     : ==> Parameters: 5(Long), 2(Long)
+2022-05-16 12:42:49.055 DEBUG 928 --- [http-nio-8081-exec-2] m.s.m.VoucherOrderMapper.selectCount     : <==      Total: 1
+2022-05-16 12:44:49.029  WARN 928 --- [http-nio-8081-exec-4] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/test, version : 1.2.8, lastPacketReceivedIdleMillis : 119963
+2022-05-16 12:44:49.070 DEBUG 928 --- [http-nio-8081-exec-5] m.s.m.SeckillVoucherMapper.selectById    : ==>  Preparing: SELECT voucher_id,stock,create_time,begin_time,end_time,update_time FROM tb_seckill_voucher WHERE voucher_id=?
+2022-05-16 12:44:49.070 DEBUG 928 --- [http-nio-8081-exec-5] m.s.m.SeckillVoucherMapper.selectById    : ==> Parameters: 2(Long)
+2022-05-16 12:44:49.072 DEBUG 928 --- [http-nio-8081-exec-5] m.s.m.SeckillVoucherMapper.selectById    : <==      Total: 1
+2022-05-16 12:44:49.072 DEBUG 928 --- [http-nio-8081-exec-6] m.s.m.SeckillVoucherMapper.selectById    : ==>  Preparing: SELECT voucher_id,stock,create_time,begin_time,end_time,update_time FROM tb_seckill_voucher WHERE voucher_id=?
+2022-05-16 12:44:49.072 DEBUG 928 --- [http-nio-8081-exec-6] m.s.m.SeckillVoucherMapper.selectById    : ==> Parameters: 2(Long)
+2022-05-16 12:44:49.074 DEBUG 928 --- [http-nio-8081-exec-6] m.s.m.SeckillVoucherMapper.selectById    : <==      Total: 1
+2022-05-16 12:44:49.074 DEBUG 928 --- [http-nio-8081-exec-7] m.s.m.SeckillVoucherMapper.selectById    : ==>  Preparing: SELECT voucher_id,stock,create_time,begin_time,end_time,update_time FROM tb_seckill_voucher WHERE voucher_id=?
+2022-05-16 12:44:49.075 DEBUG 928 --- [http-nio-8081-exec-7] m.s.m.SeckillVoucherMapper.selectById    : ==> Parameters: 2(Long)
+2022-05-16 12:44:49.076 DEBUG 928 --- [http-nio-8081-exec-7] m.s.m.SeckillVoucherMapper.selectById    : <==      Total: 1
