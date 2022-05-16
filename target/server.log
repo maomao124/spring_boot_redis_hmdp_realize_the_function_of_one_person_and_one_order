@@ -1,0 +1,15 @@
+2022-05-16 12:47:49.131  INFO 5860 --- [main] unctionOfOnePersonAndOneOrderApplication : Starting SpringBootRedisHmdpCouponSeckillToPlaceAnOrderRealizeTheFunctionOfOnePersonAndOneOrderApplication v0.0.1-SNAPSHOT using Java 16.0.2 on mao with PID 5860 (H:\程序\大三下期\spring_boot_redis_hmdp优惠券秒杀下单实现一人一单功能\target\spring_boot_redis_hmdp-0.0.1-SNAPSHOT.jar started by mao in H:\程序\大三下期\spring_boot_redis_hmdp优惠券秒杀下单实现一人一单功能\target)
+2022-05-16 12:47:49.134 DEBUG 5860 --- [main] unctionOfOnePersonAndOneOrderApplication : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-16 12:47:49.134  INFO 5860 --- [main] unctionOfOnePersonAndOneOrderApplication : The following 1 profile is active: "dev"
+2022-05-16 12:47:49.987  INFO 5860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-16 12:47:49.992  INFO 5860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-05-16 12:47:50.033  INFO 5860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2022-05-16 12:47:50.814  INFO 5860 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-05-16 12:47:50.824  INFO 5860 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-16 12:47:50.824  INFO 5860 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-05-16 12:47:50.900  INFO 5860 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-16 12:47:50.900  INFO 5860 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1695 ms
+2022-05-16 12:47:51.289  INFO 5860 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-05-16 12:47:51.514  INFO 5860 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-16 12:47:53.027  INFO 5860 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-05-16 12:47:53.044  INFO 5860 --- [main] unctionOfOnePersonAndOneOrderApplication : Started SpringBootRedisHmdpCouponSeckillToPlaceAnOrderRealizeTheFunctionOfOnePersonAndOneOrderApplication in 4.562 seconds (JVM running for 5.047)

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: mao.spring_boot_redis_hmdp.SpringBootRedisHmdpCouponSeckillToPlaceAnOrderRealizeTheFunctionOfOnePersonAndOneOrderApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.202 s - in mao.spring_boot_redis_hmdp.SpringBootRedisHmdpCouponSeckillToPlaceAnOrderRealizeTheFunctionOfOnePersonAndOneOrderApplicationTests
